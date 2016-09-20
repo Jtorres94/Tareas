@@ -6,16 +6,18 @@ public class Alumnos {
     private String apellido;
     private String rut;
     private String matricula;
+    private int fuerza;
 
     public Alumnos() {
 
     }
 
-    public Alumnos(String nombre, String apellido, String rut, String matricula) {
+    public Alumnos(String nombre, String apellido, String rut, String matricula, int fuerza) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.rut = rut;
         this.matricula = matricula;
+        this.fuerza = fuerza;
     }
 
     public String getNombre() {
@@ -48,6 +50,23 @@ public class Alumnos {
 
     public void setMatricula(String matricula) {
         this.matricula = matricula;
+    }
+
+    public int getFuerza() {
+        return fuerza;
+    }
+
+    public void setFuerza(int fuerza) {
+        this.fuerza = fuerza;
+    }
+
+    public void añadirFuerza(int fuerza){
+        this.fuerza=(int)Math.random()*101;
+    }
+    
+    @Override
+    public String toString() {
+        return "Alumnos{" + "nombre=" + nombre + ", apellido=" + apellido + ", rut=" + rut + ", matricula=" + matricula + '}';
     }
 
 }
